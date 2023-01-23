@@ -13,34 +13,35 @@
 		<nav class = "site-left">
 			<ul>
 				<dt>目次</dt>
-				<dd><a href = "#MIDI's_mean">1．MIDIの意味</a></dd>
-				<dd><a href = "#MIDI's_history">2．MIDIの歴史</a></dd>
-				<dd><a href = "#MIDI's_using">3．MIDIの利用例</a></dd>
-				<dd><a href = "#MIDI's_merit_or_demerit">4．MIDIのメリット・デメリット</a></dd>
+				<dd><a href = "#Three_elements_of_Sound">1．音の三要素</a></dd>
+				<dd><a href = "#Loudness_of_Sound">2．大きさ</a></dd>
+				<dd><a href = "#Pitch_of_Sound">3．高さ</a></dd>
+				<dd><a href = "#Timbre_of_Sound">4．音色</a></dd>
 			</ul>
 		</nav>
 		
 		<div class = "text">
-			<h1 class = "title">第一回MIDIファイル作成方法</h1>
-			<h2 class = "substance">内容：そもそもMIDIファイルとは何か。</h2>
+			<h1 class = "title">第二回音を数値で表現する方法</h1>
+			<h2 class = "substance">内容：音を数値で管理する方法は何か。</h2>
 		
 			<div class = "content">
-				<section id="MIDI's_mean">
-					<h1>1．MIDIの意味</h1>
-					<p>そもそもMIDIというものは、何をするためのものか、皆さんはわかりますか？</p><br>
-					<p>MIDIは「Musical Instruments Digital Interface」の頭文字をとったものです。(大抵こういうものの名付け方は頭文字でされています。)<br>
-					では、これらの意味を見ていきましょう。</p><br>
-					<p>Musical ・・・・・音楽的な<br>
-					Instruments ・・・道具を<br>
-					Digital ・・・・・数字を使うことで<br>
-					Interface ・・・・接続する</p><br>
+				<section id="Three_elements_of_Sound">
+					<h1>1．音の三要素</h1>
+					<p>第２回です。一応、この回までが座学で、次回以降は実際にソフトを触る<b>予定</b>です。(ここ大事ですね。)</p><br>
+					<p>今回の内容としては、音を数値で管理するためにはどうすればよいかです。<br>
+					では、さっそく重要な<em><b>音の三要素</b></em>についてのお話です。</p><br>
+					<p>音の三要素とは以下のものを表します。</p>
+					<p>○音の<em>大きさ</em><br>
+					 ○音の<em>高さ</em><br>
+					 ○音の<em>音色</em><br>
+					<!--  ここ以降を編集する  --> 
 					<p>繋げてみれば、このような意味です。ただし、Interfaceは動詞ではないので、結構な意訳になっています。<br>
 					簡単にまとめると、MIDIファイルに入っているのは、楽譜のようなものです。<br>
 					演奏するための情報を入れておき、それをパソコンが実行することによって、音楽を鳴らす仕組みのようなものです。</p>
 				</section>
 		
-				<section id = "MIDI's_history">
-					<h1>2．MIDIの歴史</h1>
+				<section id = "Loudness_of_Sound">
+					<h1>2．大きさ</h1>
 					<p>では、MIDIが登場した時期、また、その背景をみてみましょう。<br>
 					   MIDIは1981年に策定された電子楽器同士を接続するための世界共通規格として誕生しました。もう、MIDIはこの世に生を受けて40年ほどになります。<br>
 					   当時のヤマハ、ローランド、カワイ、コルグの日本メーカー4社とシーケンシャル・サーキット、オーバーハイムのアメリカメーカー2社の計6社の合意によりまとまったものです。
@@ -60,8 +61,8 @@
 					</p>
 				</section>
 		
-				<section id = "MIDI's_using">
-				<h1>3．MIDIの利用例</h1>
+				<section id = "Pitch_of_Sound">
+				<h1>3．高さ</h1>
 				<p>「2．MIDIの歴史」にも記述のある通り、音の情報を数値で表現させることにより、楽譜のようなものがMIDIファイルと呼ばれます。<br>
 				   このファイルは、音一つ一つの情報を数値で決めているので、編集をしやすい状態になっております。<br>
 				   では、どのようなこと、ものに使われているかを、見てみましょう。<br>
@@ -80,8 +81,8 @@
 				<p>ということが挙げられます。</p>
 				</section>
 		
-				<section id = "MIDI's_merit_or_demerit">
-					<h1>4．MIDIのメリット・デメリット</h1>
+				<section id = "Timbre_of_Sound">
+					<h1>4．音色</h1>
 					<p>まず、メリットとデメリットを考えるためにはMIDIとついになるものが必要です。<br>
 					   音楽ファイルで利用率が高いものは拡張子として「.mp3」や「.wav」などがあります。これらの総称は<b>オーディオファイル</b>ですね。<br>
 					   このファイルは、曲を1曲すべて、そのまま保存させたものになります。例えば、CDに保存した曲というものは、再生をすれば必ずと言っていいほど、
