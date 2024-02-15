@@ -35,8 +35,10 @@
 				</tr>
 			</table>
 			<h2>提出用フォーム</h2>
-			<input type = "file" name = "test">
-			<input type = "submit" value = "送信する">
+			<form method = "post" action = "upload_python.py" enctype = "multipart/form-data">
+			<input type = "file" name = "files" multiple>
+			<p><input type = "submit" value = "送信する"></p>
+			</form>
 		</div>
 	</body>
 </html>
