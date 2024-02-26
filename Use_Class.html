@@ -8,6 +8,29 @@
 		<link rel = "stylesheet" href = "../Css/responsive_design_SP.css">
 		<link rel = "stylesheet" href = "../Css/responsive_design_TAB.css">
 		<title>科目選択ページ</title>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('hia0r8dFUvlDdhPnh');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_0o2xep3', 'EMAIL_TEMPLATE_ID', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 	</head>
 
 	<body>
@@ -36,7 +59,7 @@
        <div class="form_inner">
         <h3>問い合わせ(未実装)</h3>
         <p>松田への授業についてのお問い合わせ（質問等）は、以下のフォームよりお送りください。</p>
-        <form method="post" action="mail.php">
+        <form id="contact-form">
           <table class="formTable">
             <tr>
               <th>内　容</th>
@@ -44,24 +67,28 @@
                   <option value="">選択してください</option>
                   <option value="質問・数学">数学の授業内容での質問</option>
                   <option value="質問・PG">PGの授業での質問</option>
-                  <option value="その他">休んだ場合のプリント等印刷希望・その他の質問</option>
+                  <option value="その他">その他の質問</option>
                 </select> <span class="form_require">※必須</span></td>
             </tr>
             <tr>
               <th>学年・クラス</th>
-              <td><input size="70" type="text" name="Email" required />（半角） <span class="form_require">※必須</span><br>(例)3年1組の場合「3-1」とする。</td>
+              <td><input size="70" type="text" name="class" required />（半角） <span class="form_require">※必須</span><br>(例)3年1組の場合「3-1」とする。</td>
             </tr>
             <tr>
               <th>出席番号</th>
-              <td><input size="70" type="text" name="Email" required />（半角） <span class="form_require">※必須</span><br>番号のみ打つ。(例)21番の場合「21」とする。</td>
+              <td><input size="70" type="text" name="number" required />（半角） <span class="form_require">※必須</span><br>番号のみ打つ。(例)21番の場合「21」とする。</td>
             </tr>
             <tr>
               <th>氏名</th>
-              <td><input size="70" type="text" name="お名前" required /> <span class="form_require">※必須</span></td>
+              <td><input size="70" type="text" name="name" required /> <span class="form_require">※必須</span></td>
+            </tr>
+	    <tr>
+              <th>メールアドレス</th>
+              <td><input size="70" type="text" name="name"/> <span class="form_require">※返信の必要がある場合は書いてください。</span></td>
             </tr>
             <tr>
               <th>問い合わせ内容<br /></th>
-              <td><textarea name="問い合わせ内容" cols="70" rows="10"></textarea></td>
+              <td><textarea name="ask" cols="70" rows="10"></textarea></td>
             </tr>
           </table>
           <p align="center">
